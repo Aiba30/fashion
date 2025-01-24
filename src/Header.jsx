@@ -25,13 +25,13 @@ export const Header = ()=>{
 			</nav>
 			<div className="header__btns">
 				<button className="search-btn">
-					<img className="search" src="/public/icons8-search.svg" alt="search" />
+					<img className="search" src="/icons8-search.svg" alt="search" />
 				</button>
 				<button className="heart-btn">
-					<img className="heart" src="/public/heart-svgrepo-com.svg" alt="heart" />
+					<img className="heart" src="/heart-svgrepo-com.svg" alt="heart" />
 				</button>
 				<button className="cart-btn">
-					<img className="cart" src="/public/reshot-icon-shopping-cart-W2FJV6L7U5.svg" alt="cart" />
+					<img className="cart" src="/reshot-icon-shopping-cart-W2FJV6L7U5.svg" alt="cart" />
 				</button>
 			</div>
 		</header>

@@ -44,6 +44,13 @@ ol {
 	gap: 25px;
 }
 
+.search,
+.heart,
+.cart {
+	width: 20px;
+	height: 20px;
+}
+
 .hero {
 	height: 100vh;
 	padding: 100px 160px;
@@ -80,4 +87,51 @@ ol {
 	padding: 4px 28px;
 	background: #22262A;
 	color: white;
+}
+
+.fashion {
+	padding: 0 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+	margin-bottom: 50px;
+}
+
+.text-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.card-container {
+	display: flex;
+	gap: 22px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	color: #22262A;
+}
+
+.card-image {
+	width: 268px;
+	height: 371px;
+	margin-bottom: 38px;
+}
+
+.card-name {
+	font-weight: 300;
+}
+
+.card-price:first-child {
+	text-decoration: line-through;
+	margin-right: 20px;
+}
+
+.active {
+	color: red;
 }
