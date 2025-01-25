@@ -1,3 +1,4 @@
+import './fashion.css';
 export const Card = ({picture,name,desc,price,activePrice})=>{
 	return(
 		<div className="card">

@@ -1,0 +1,107 @@
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	color: #22262A;
+	min-height: 699px;
+	background: #F2F8FC;
+	padding: 115px 0 0 0;
+	position: relative;
+}
+
+
+.footer-left {
+	max-width: 406px;
+}
+
+.info {
+	margin-bottom: 41px;
+}
+
+.logo {
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 17px;
+}
+
+.desc {
+	font-size: 15px;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.address {
+	display: flex;
+	gap: 26px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.line {
+	width: 237px;
+	height: 2px;
+	background: grey;
+}
+
+
+.title {
+	font-size: 25px;
+	margin-bottom: 24px;
+}
+
+.form {
+	margin-bottom: 70px;
+}
+
+.form input {
+	height: 45px;
+	width: 500px;
+	padding: 11px 24px;
+	font-size: 15px;
+	word-spacing: 0.1em;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+
+.form button {
+	background: white;
+	font-weight: 600;
+	color: #22262A;
+	padding: 15px 16px;
+	border-radius: 5px;
+}
+
+.links {
+	display: flex;
+	gap: 80px;
+}
+
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.column__title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.footer-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 35px 0;
+	text-align: center;
+	background: #E7F5F8;
+}

@@ -1,0 +1,1 @@
+export {WFashion} from './WFashion.jsx';

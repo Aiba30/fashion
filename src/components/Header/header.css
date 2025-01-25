@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 230px;
+}
+
+.header__logo {
+	font-weight: 700;
+	font-size: 28px;
+	color: #22262A;
+}
+
+.menu__list {
+	display: flex;
+	gap: 20px;
+	font-size: 18px;
+}
+
+.header__btns {
+	display: flex;
+	gap: 25px;
+}
+
+.search,
+.heart,
+.cart {
+	width: 20px;
+	height: 20px;
+}

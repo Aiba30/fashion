@@ -1,6 +1,8 @@
-import { Header } from "./Header";
-import { Hero } from "./Hero";
-import { WFashion } from "./WFashion";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { WFashion } from "./components/WFashion";
+
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
 		<Header/>
 		<Hero/>
 		<WFashion/>
+		<Footer/>
     </div>
   );
 }
