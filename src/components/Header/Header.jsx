@@ -1,5 +1,5 @@
 import './header.css';
-export const Header = ()=>{
+export const Header = ({open})=>{
 	return(
 		<header className="header">
 			<div className="header__logo">
@@ -34,6 +34,7 @@ export const Header = ()=>{
 				<button className="cart-btn">
 					<img className="cart" src="/reshot-icon-shopping-cart-W2FJV6L7U5.svg" alt="cart" />
 				</button>
+				<button onClick={open}>Войти</button>
 			</div>
 		</header>
 	)

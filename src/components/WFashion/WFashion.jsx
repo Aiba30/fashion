@@ -9,9 +9,9 @@ export const WFashion = ()=>{
 				<p className="fashion-subtitle">Shop our new arrivals from established brands</p>
 			</div>
 			<div className="card-container">
-				{images.map(img=>{
+				{images.map((img,index)=>{
 					return (
-					<Card picture={img} name='IGURE' desc='GREEN MUSCLE FIT POLO SHIRT'
+					<Card key={index} picture={img} name='IGURE' desc='GREEN MUSCLE FIT POLO SHIRT'
 					price='$229.00' activePrice='$129.00'/>
 				)
 				})}
