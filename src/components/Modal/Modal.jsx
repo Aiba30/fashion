@@ -1,4 +1,5 @@
 import './modal.css'
+import { Timer } from './Timer'
 export const Modal = ({isOpen,close})=>{
 	return(
 		<div style={isOpen ? {display:'flex'} : {display:'none'}} className="modal">
@@ -11,6 +12,7 @@ export const Modal = ({isOpen,close})=>{
 					<input type="password" placeholder='Пароль' />
 					<button>Авторизоваться</button>
 				</form>
+				{isOpen && <Timer isOpen = {isOpen}/>}
 			</div>
 		</div>
 	)
