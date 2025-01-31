@@ -1,6 +1,17 @@
+import { useEffect, useState } from 'react';
 import './modal.css'
 import { Timer } from './Timer'
 export const Modal = ({isOpen,close})=>{
+	const [seconds,setSeconds] = useState(0);
+	useEffect(()=>{
+		let timer = setInterval(()=>{
+			setSeconds(prev=>prev+1)
+		},1000);
+		return ()=>{
+			clearInterval(timer);
+			setTimeout(()=>alert("Выполнено размонтирование компоненты"),0)
+		}
+	},[]);
 	return(
 		<div className="modal">
 			<div className="modal__content">
@@ -12,7 +23,7 @@ export const Modal = ({isOpen,close})=>{
 					<input type="password" placeholder='Пароль' />
 					<button>Авторизоваться</button>
 				</form>
-				{isOpen && <Timer isOpen = {isOpen}/>}
+				{isOpen && <Timer seconds = {seconds}/>}
 			</div>
 		</div>
 	)
