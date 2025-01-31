@@ -13,7 +13,7 @@ function App() {
 		<Header open = {onOpen}/>
 		<Hero/>
 		<WFashion/>
-		<Modal close = {onClose} isOpen = {isOpen}/>
+		{isOpen && <Modal close = {onClose} isOpen={isOpen}/>}
 		<Footer/>
     </div>
   );

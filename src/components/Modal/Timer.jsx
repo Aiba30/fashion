@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const Timer = ({isOpen})=>{
+export const Timer = ()=>{
 	const [seconds,setSeconds] = useState(0);
 	useEffect(()=>{
 		let timer = setInterval(()=>{
@@ -8,7 +8,7 @@ export const Timer = ({isOpen})=>{
 		},1000);
 		return ()=>{
 			clearInterval(timer);
-			alert('sokdk')
+			setTimeout(()=>alert("Выполнено размонтирование компоненты"),0)
 		}
 	},[]);
 	

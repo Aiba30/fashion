@@ -2,7 +2,7 @@ import './modal.css'
 import { Timer } from './Timer'
 export const Modal = ({isOpen,close})=>{
 	return(
-		<div style={isOpen ? {display:'flex'} : {display:'none'}} className="modal">
+		<div className="modal">
 			<div className="modal__content">
 				<button onClick={close} className='close-modal'>&#x2715;</button>
 				<h3 className='modal__title'>Войдите в свой аккаунт</h3>
