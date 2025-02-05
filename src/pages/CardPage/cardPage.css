@@ -1,0 +1,11 @@
+.current-card {
+	margin-left: 50px;
+}
+
+.return {
+	padding: 10px 15px;
+	background: rgb(12, 163, 12);
+	color: white;
+	border-radius: 5px;
+	margin: 0 0 10px 10px;
+}

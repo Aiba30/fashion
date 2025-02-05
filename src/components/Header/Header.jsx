@@ -32,7 +32,7 @@ export const Header = ({ open }) => {
             return (
               <li key={index} className="menu__item">
                 <NavLink
-                  className={({ isActive }) => isActive && "active"}
+                  className={({ isActive }) => (isActive ? "active" : "")}
                   to={link.src}
                 >
                   {link.text}

@@ -7,6 +7,7 @@ import { Blog } from "./pages/BLOG";
 import { Features } from "./pages/FEATURES";
 import { LokBook } from "./pages/LOKBOOK";
 import { Pages } from "./pages/PAGES";
+import { CardPage } from "./pages/CardPage";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 				<Route path="/features" element = {<Features/>}/>
 				<Route path="/lokBook" element = {<LokBook/>}/>
 				<Route path="/pages" element ={<Pages/>}/>
+				<Route path="/card/:cardId" element={<CardPage/>}/>
 				<Route path="*" element = {<h1>Not Found</h1>}/>
 			</Routes>
 		<Footer/>

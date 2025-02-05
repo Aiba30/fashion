@@ -24,6 +24,7 @@
 	flex-direction: column;
 	gap: 5px;
 	color: #22262A;
+	cursor: pointer;
 }
 
 .card-image {
