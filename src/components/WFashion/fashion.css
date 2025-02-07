@@ -24,13 +24,13 @@
 	flex-direction: column;
 	gap: 5px;
 	color: #22262A;
-	cursor: pointer;
 }
 
 .card-image {
 	width: 268px;
 	height: 371px;
 	margin-bottom: 38px;
+	cursor: pointer;
 }
 
 .card-name {

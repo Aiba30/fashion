@@ -8,6 +8,7 @@ import { Features } from "./pages/FEATURES";
 import { LokBook } from "./pages/LOKBOOK";
 import { Pages } from "./pages/PAGES";
 import { CardPage } from "./pages/CardPage";
+import { OrderForm } from "./pages/OrderForm";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 				<Route path="/lokBook" element = {<LokBook/>}/>
 				<Route path="/pages" element ={<Pages/>}/>
 				<Route path="/card/:cardId" element={<CardPage/>}/>
+				<Route path="/order" element={<OrderForm/>}/>
 				<Route path="*" element = {<h1>Not Found</h1>}/>
 			</Routes>
 		<Footer/>

@@ -31,6 +31,12 @@ export const CardPage = () => {
           <span className="card-price active">{currentCard.activePrice}</span>
         </div>
       </div>
+      <button
+        onClick={() => navigate("/order", { state: currentCard })}
+        className="order-btn"
+      >
+        order
+      </button>
     </main>
   );
 };

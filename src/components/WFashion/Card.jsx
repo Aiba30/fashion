@@ -13,8 +13,13 @@ export const Card = ({ id, picture, name, desc, price, activePrice }) => {
   }
   const redirect = useNavigate();
   return (
-    <div onClick={() => redirect(`/card/${id}`)} className="card">
-      <img src={picture} alt="card-img" className="card-image" />
+    <div className="card">
+      <img
+        onClick={() => redirect(`/card/${id}`)}
+        src={picture}
+        alt="card-img"
+        className="card-image"
+      />
       <p className="card-name">{name}</p>
       <h6 className="card-description">{desc}</h6>
       <div className="cart">
