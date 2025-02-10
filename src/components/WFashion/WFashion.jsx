@@ -1,7 +1,18 @@
 import { Card } from "./Card";
 import "./fashion.css";
 import { cards } from "../../mock/mockFile";
+import { useMemo, useState } from "react";
 export const WFashion = () => {
+  const [value, setValue] = useState("");
+  const filteredCards = useMemo(
+    () =>
+      cards.filter((item) => {
+        if (item.name.toLocaleLowerCase().includes(value)) {
+          return item;
+        }
+      }),
+    [value]
+  );
   return (
     <section className="fashion">
       <div className="text-content">
@@ -10,8 +21,13 @@ export const WFashion = () => {
           Shop our new arrivals from established brands
         </p>
       </div>
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        type="text"
+      />
       <div className="card-container">
-        {cards.map((card) => {
+        {filteredCards.map((card) => {
           return (
             <Card
               key={card.id}

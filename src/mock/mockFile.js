@@ -12,7 +12,7 @@ export const cards = [
 		desc:'GREEN MUSCLE FIT POLO SHIRT',
 		price:'$229.00',
 		activePrice:'$129.00',
-		name:'IGURE',
+		name:'ULKHHH',
 		id:2
 	},
 	{
@@ -20,7 +20,7 @@ export const cards = [
 		desc:'GREEN MUSCLE FIT POLO SHIRT',
 		price:'$229.00',
 		activePrice:'$129.00',
-		name:'IGURE',
+		name:'VJHIJJ',
 		id:3
 	},
 	{
@@ -28,7 +28,7 @@ export const cards = [
 		desc:'GREEN MUSCLE FIT POLO SHIRT',
 		price:'$229.00',
 		activePrice:'$129.00',
-		name:'IGURE',
+		name:'XCCGY',
 		id:4
 	},
 ]
