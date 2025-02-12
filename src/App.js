@@ -15,15 +15,17 @@ import { useState } from "react";
 
 function App() {
 	const {isOpen,onOpen,onClose} = useDisclosure(false);
-	const [cart,setCart] = useState([]);
+	const [cart,setCart] = useState({});
 	function addInCart(id, picture, name, desc, price, activePrice){
-		setCart(prev=>[...prev,{id,picture,name,desc,price,activePrice}]);
+		const newCart = {...cart};
+		newCart[id] = newCart[id] ? [...newCart[id],{id,picture,name,desc,price,activePrice}] : [{id,picture,name,desc,price,activePrice}];
+		setCart(newCart);
 	}
 
 	function deleteInCart(id){
-			const cardId = cart.findIndex(item => item.id === id);
-			if (cardId === -1) return;
-			setCart(cart.filter((_, index) => index !== cardId));
+		const filterCart = {...cart};
+		filterCart[id].pop();
+		setCart(filterCart);
 	}
 
   return (
@@ -31,7 +33,7 @@ function App() {
 		<BrowserRouter>
 		<Header open = {onOpen}/>
 			<Routes>
-				<Route path="/" element={<Home addInCart={addInCart} deleteInCart={deleteInCart} close = {onClose} isOpen = {isOpen}/>}/>
+				<Route path="/" element={<Home cart={cart} addInCart={addInCart} deleteInCart={deleteInCart} close = {onClose} isOpen = {isOpen}/>}/>
 				<Route path="/blog" element = {<Blog/>}/>
 				<Route path="/features" element = {<Features/>}/>
 				<Route path="/lokBook" element = {<LokBook/>}/>

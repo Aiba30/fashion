@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback } from "react";
 import "./fashion.css";
 import { useNavigate } from "react-router-dom";
 export const Card = ({
@@ -8,17 +8,14 @@ export const Card = ({
   desc,
   price,
   activePrice,
+  cart,
   addInCart,
   deleteInCart,
 }) => {
   const redirect = useNavigate();
-  const [count, setCount] = useState(0);
-  function increment() {
-    setCount((prev) => prev + 1);
-  }
-  function decrement() {
-    if (count > 0) setCount((prev) => prev - 1);
-  }
+  const addToCart = useCallback(() => {
+    addInCart(id, picture, name, desc, price, activePrice);
+  }, [cart]);
   return (
     <div className="card">
       <img
@@ -30,23 +27,9 @@ export const Card = ({
       <p className="card-name">{name}</p>
       <h6 className="card-description">{desc}</h6>
       <div className="cart">
-        <button
-          onClick={() => {
-            addInCart(id, picture, name, desc, price, activePrice);
-            increment();
-          }}
-        >
-          +
-        </button>
-        <span>{count}</span>
-        <button
-          onClick={() => {
-            deleteInCart(id);
-            decrement();
-          }}
-        >
-          -
-        </button>
+        <button onClick={addToCart}>+</button>
+        <span>{cart[id] ? cart[id].length : 0}</span>
+        <button onClick={() => deleteInCart(id)}>-</button>
       </div>
       <div className="card-prices">
         <span className="card-price">{price}</span>

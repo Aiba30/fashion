@@ -1,38 +1,31 @@
 import { useState } from "react";
-const styles = {
-  width: "150px",
-  padding: "10px",
-  border: "solid",
-  margin: "0 0 0 15px",
-};
+import "./cart.css";
 export const Cart = ({ cart }) => {
   const [state, setState] = useState(cart);
+  function renderCards() {
+    const cards = [];
+    for (let key in state) {
+      cards.push(...state[key]);
+    }
+    return cards;
+  }
   return (
-    <main>
-      <h1>Cart</h1>
-      {state.length > 0 ? (
-        cart.map((item, index) => {
-          return (
-            <>
-              <p style={styles} key={index}>
-                {item.name}
-              </p>
-              <button
-                style={{
-                  padding: "10px 15px",
-                  background: "orange",
-                  margin: "0 0 10px 140px",
-                  borderRadius: "5px",
-                }}
-              >
-                delete
-              </button>
-            </>
-          );
-        })
-      ) : (
-        <p>Корзина пуста</p>
-      )}
+    <main className="cart-main">
+      <h1 className="cart-title">Cart</h1>
+      <div className="cartt">
+        {renderCards().length > 0 ? (
+          renderCards().map((card, index) => {
+            return (
+              <div className="cart__item" key={index}>
+                <p className="cart__name">{card.name}</p>
+                <p className="cart__desc">{card.desc}</p>
+              </div>
+            );
+          })
+        ) : (
+          <h2>Корзина пуста</h2>
+        )}
+      </div>
     </main>
   );
 };
