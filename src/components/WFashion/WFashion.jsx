@@ -2,7 +2,7 @@ import { Card } from "./Card";
 import "./fashion.css";
 import { cards } from "../../mock/mockFile";
 import { useMemo, useState } from "react";
-export const WFashion = () => {
+export const WFashion = ({ addInCart, deleteInCart }) => {
   const [value, setValue] = useState("");
   const filteredCards = useMemo(
     () =>
@@ -37,6 +37,8 @@ export const WFashion = () => {
               desc={card.desc}
               price={card.price}
               activePrice={card.activePrice}
+              addInCart={addInCart}
+              deleteInCart={deleteInCart}
             />
           );
         })}

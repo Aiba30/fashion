@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./header.css";
 const links = [
   {
@@ -23,6 +23,7 @@ const links = [
   },
 ];
 export const Header = ({ open }) => {
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="header__logo">YOUR LOGO</div>
@@ -49,7 +50,7 @@ export const Header = ({ open }) => {
         <button className="heart-btn">
           <img className="heart" src="/heart-svgrepo-com.svg" alt="heart" />
         </button>
-        <button className="cart-btn">
+        <button onClick={() => navigate("/cart")} className="cart-btn">
           <img
             className="cart"
             src="/reshot-icon-shopping-cart-W2FJV6L7U5.svg"
