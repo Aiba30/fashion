@@ -11,6 +11,8 @@ import { CardPage } from "./pages/CardPage";
 import { OrderForm } from "./pages/OrderForm";
 import { Cart } from "./pages/Cart/Cart";
 import { useState } from "react";
+import { UserefComponent } from "./useRef/useRef";
+import { Video } from "./useRef/Video";
 
 
 function App() {
@@ -37,12 +39,14 @@ function App() {
 				<Route path="/blog" element = {<Blog/>}/>
 				<Route path="/features" element = {<Features/>}/>
 				<Route path="/lokBook" element = {<LokBook/>}/>
-				<Route path="/pages" element ={<Pages/>}/>
+				<Route path="/pages" element = {<Pages/>}/>
 				<Route path="/card/:cardId" element={<CardPage/>}/>
 				<Route path="/order" element={<OrderForm/>}/>
 				<Route path="/cart" element = {<Cart cart={cart}/>}/>
 				<Route path="*" element = {<h1>Not Found</h1>}/>
 			</Routes>
+			<UserefComponent/>
+			<Video/>
 		<Footer/>
 		</BrowserRouter>
     </div>
