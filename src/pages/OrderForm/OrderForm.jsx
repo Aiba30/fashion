@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 export const OrderForm = () => {
   const { state } = useLocation();
   return (
-    <main>
+    <>
       <form
         style={{
           display: "flex",
@@ -19,6 +19,6 @@ export const OrderForm = () => {
       <div>
         <img src={state.img} alt="" />
       </div>
-    </main>
+    </>
   );
 };

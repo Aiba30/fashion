@@ -13,7 +13,7 @@ export const CardPage = () => {
     }
   }, []);
   return (
-    <main>
+    <>
       <button className="return" onClick={() => navigate(-1)}>
         back
       </button>
@@ -37,6 +37,6 @@ export const CardPage = () => {
       >
         order
       </button>
-    </main>
+    </>
   );
 };
