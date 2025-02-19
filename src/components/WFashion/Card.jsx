@@ -1,18 +1,9 @@
 import { useCallback } from "react";
 import "./fashion.css";
-import { useNavigate } from "react-router-dom";
-export const Card = ({
-  id,
-  picture,
-  name,
-  desc,
-  price,
-  activePrice,
-  cart,
-  addInCart,
-  deleteInCart,
-}) => {
+import { useNavigate, useOutletContext } from "react-router-dom";
+export const Card = ({ id, picture, name, desc, price, activePrice }) => {
   const redirect = useNavigate();
+  const { cart, addInCart, deleteInCart } = useOutletContext();
   const addToCart = useCallback(() => {
     addInCart(id, picture, name, desc, price, activePrice);
   }, [cart]);

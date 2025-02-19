@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./modal.css";
 import { Timer } from "./Timer";
-export const Modal = ({ isOpen, close }) => {
+import { useOutletContext } from "react-router-dom";
+export const Modal = () => {
+  const { isOpen, onClose } = useOutletContext();
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
     let timer = setInterval(() => {
@@ -15,7 +17,7 @@ export const Modal = ({ isOpen, close }) => {
   return (
     <div className="modal">
       <div className="modal__content">
-        <button onClick={close} className="close-modal">
+        <button onClick={onClose} className="close-modal">
           &#x2715;
         </button>
         <h3 className="modal__title">Войдите в свой аккаунт</h3>

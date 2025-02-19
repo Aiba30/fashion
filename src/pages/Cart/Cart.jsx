@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./cart.css";
-export const Cart = ({ cart }) => {
+import { useOutletContext } from "react-router-dom";
+export const Cart = () => {
+  const { cart } = useOutletContext();
   const [state, setState] = useState(cart);
   function renderCards() {
     const cards = [];
